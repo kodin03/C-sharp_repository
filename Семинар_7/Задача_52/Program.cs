@@ -1,7 +1,6 @@
 ﻿// Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце. 
 
-int num = 0;
-//int count;
+double num = 0;
 
 int[,] GetArray(int m, int n, int min, int max)
 {
