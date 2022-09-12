@@ -23,14 +23,15 @@ void Check(int[,] array)
         {
             if (array[i, j] == num) 
             {
-                Console.Write(i + ", " + j);
                 count++;
+                Console.WriteLine(count + " местонахождение: " + i + ", " + j + ";");
             }
         }
     }
     if (count == 0) Console.Write("Такого элемента нет");
 }
 
+// Метод нужен для определения точности ответа
 void Print(int[,] array)
 {
     for(int i = 0; i < array.GetLength(0); i++)
@@ -43,8 +44,8 @@ void Print(int[,] array)
     }
 }
 
-int m = new Random().Next(0, 5);
-int n = new Random().Next(0, 6);
+int m = new Random().Next(1, 5);
+int n = new Random().Next(1, 6);
 int min = new Random().Next(0, 49);
 int max = new Random().Next(50, 99);
 
@@ -54,4 +55,5 @@ Print(myArray);
 Console.WriteLine("Введите число:");
 num = int.Parse(Console.ReadLine());
 
+Console.WriteLine("Результат:");
 Check(myArray);
